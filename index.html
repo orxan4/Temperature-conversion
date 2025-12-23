@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 Temperature conversion program</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme_container">
+        <label for="theme_toggle">
+            <input type="checkbox" id="theme_toggle">
+            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="24" height="24"><path d="M576 320v2.7c-.4 36.5-33.6 61.3-70.1 61.3H408c-26.5 0-48 21.5-48 48 0 3.4.4 6.7 1 9.9 2.1 10.2 6.5 20 10.8 29.9 6.1 13.8 12.1 27.5 12.1 42 0 31.8-21.6 60.7-53.4 62-3.5.1-7 .2-10.6.2-141.4 0-256-114.6-256-256S178.6 64 320 64s256 114.6 256 256m-384 32c0-17.7-14.3-32-32-32s-32 14.3-32 32 14.3 32 32 32 32-14.3 32-32m0-96c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32m160-96c0-17.7-14.3-32-32-32s-32 14.3-32 32 14.3 32 32 32 32-14.3 32-32m96 96c17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32 14.3 32 32 32"/></svg></span>
+        </label>
+        <div class="theme_card">
+            <div class="theme_option" data-theme="light"></div>
+            <div class="theme_option" data-theme="dark"></div>
+            <div class="theme_option" data-theme="hard-dark"></div>
+            <div class="theme_option" data-theme="high-light"></div>
+            <div class="theme_option" data-theme="green"></div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container">
+            <div class="section height-res">
+                <h1 class="title">Temperature conversion:</h1>
+                <div class="from">
+                    <input type="number" id="inputTemp" value="1">
+                    <span id="fromTemp">℉</span>
+                </div>
+                
+                <div class="wrapper">
+                    <label for="reverse" class="label_reverse">
+                        <input type="checkbox" name="reverse" id="reverse">
+                        <span class="span_reverse">&#8596;</span>
+                    </label>
+                    <div class="temp_inputs">
+                        <canvas id="connectCanvas"></canvas>
+
+                        <div class="select_temp left">
+                            <label for="left_f">
+                                <input type="radio" id="left_f" name="left_temp" value="0" checked>
+                                <span>Fahrenheit</span>
+                            </label>
+                            <label for="left_c">
+                                <input type="radio" id="left_c" name="left_temp" value="1">
+                                <span>Celsius</span>
+                            </label>
+                            <label for="left_de">
+                                <input type="radio" id="left_de" name="left_temp" value="2">
+                                <span>Delisle</span>
+                            </label>
+                            <label for="left_k">
+                                <input type="radio" id="left_k" name="left_temp" value="3">
+                                <span>Kelvin</span>
+                            </label>
+                            <label for="left_n">
+                                <input type="radio" id="left_n" name="left_temp" value="4">
+                                <span>Newton</span>
+                            </label>
+                            <label for="left_r">
+                                <input type="radio" id="left_r" name="left_temp" value="5">
+                                <span>Rankine</span>
+                            </label>
+                            <label for="left_re">
+                                <input type="radio" id="left_re" name="left_temp" value="6">
+                                <span>Réaumur</span>
+                            </label>
+                            <label for="left_ro">
+                                <input type="radio" id="left_ro" name="left_temp" value="7">
+                                <span>Rømer</span>
+                            </label>
+                        </div>
+
+                        <div class="select_temp right">
+                            <label for="right_f">
+                                <input type="radio" id="right_f" name="right_temp" value="0">
+                                <span>Fahrenheit</span>
+                            </label>
+                            <label for="right_c">
+                                <input type="radio" id="right_c" name="right_temp" value="1" checked>
+                                <span>Celsius</span>
+                            </label>
+                            <label for="right_de">
+                                <input type="radio" id="right_de" name="right_temp" value="2">
+                                <span>Delisle</span>
+                            </label>
+                            <label for="right_k">
+                                <input type="radio" id="right_k" name="right_temp" value="3">
+                                <span>Kelvin</span>
+                            </label>
+                            <label for="right_n">
+                                <input type="radio" id="right_n" name="right_temp" value="4">
+                                <span>Newton</span>
+                            </label>
+                            <label for="right_r">
+                                <input type="radio" id="right_r" name="right_temp" value="5">
+                                <span>Rankine</span>
+                            </label>
+                            <label for="right_re">
+                                <input type="radio" id="right_re" name="right_temp" value="6">
+                                <span>Réaumur</span>
+                            </label>
+                            <label for="right_ro">
+                                <input type="radio" id="right_ro" name="right_temp" value="7">
+                                <span>Rømer</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="submit">convert</button>
+            </div>
+
+            <p id="convertedTemp"></p>
+
+            <div class="section">
+                <p id="formula"></p>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
