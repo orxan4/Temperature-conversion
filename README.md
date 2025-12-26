@@ -8,4 +8,4 @@ Sadə UI və rahat istifadə üçün hazırlanıb.
 
 ![Temperature Conversion](Temperature-conversion-program.gif)
 
-code link: https://codepen.io/orxan4/pen/azZzybK
+code link: <a href="https://codepen.io/orxan4/pen/azZzybK" target="_blank">https://codepen.io/orxan4/pen/azZzybK</a>
